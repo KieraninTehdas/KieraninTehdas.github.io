@@ -1,29 +1,27 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2020-05-23 15:15:17 +0100
-categories: jekyll update
+title: "Welcome to Lockdown"
+date: 2020-05-23 15:15:17 +0100
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+So despite thinking that I'd mostly keep post subjects to conference talks that I've enjoyed, my first post is not a conference video!
 
-`YEAR-MONTH-DAY-title.MARKUP`
+I live in Scotland, where like most people around the world we have been living under "lockdown" since March. Essentially this means staying at home as much as possible and only leaving the house for essential journeys or exercise. Thankfully we live next to a beautiful park so have been able to enjoy the outdoors. I've probably spent more time in nature in the last 8 weeks than the previous 8 months! I can certainly name more birds than ever and take more delight in seeing them. It's skylark breeding seasons and I don't think I'll ever get tired of seeing skylarks performing their song flights.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+As a result of the lockdown the company I work for took the responsible decision that we would move to being a fully remote team. We're fairly remote anyway with colleagues spread across the UK and US, and many people work from home two days a week. Despite the privilege of having a very flexible remote working policy, I've never been a great work-from-homer apart from a December working completely remote from Finland. I love the atmosphere of being surrounded by people in an office and enjoy chatting with people over coffee and eating lunch with everyone, so I wasn't crazy about the thought of spending potentially several months away from the office.
 
-Jekyll also offers powerful support for code snippets:
+In reality it's not been anywhere near as bad as I thought! Thankfully I'm not alone at home, so I've not been consumed by loneliness for a start.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+I have never found working from home a particularly satisfying experience in the past. Though there were times when the lack of physical distraction made it easier to concentrate, the constant feeling of pressure to be all over Slack and the fact that conversations were often going on in meatspace in the office could make things feel a bit disconnected. Being a remote participant in a meeting that had a large contingent of people together in the office was especially difficult, as despite everyone's best efforts you can easily become a second-class participant.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+This has been a definite upside of everyone being remote: you're all on the same level. Everyone has to exercise the same discipline of being careful not to accidentally speak over someone else, and there's no awkward asking is anyone remembered to set up a Zoom meeting link.
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Working at home for more than just the odd day has also made the logistics of getting things set up far simpler. I had previously found it frustrating to have to get the laptop set up and remember to bring all the dongles and adaptors (thanks Apple...) that I needed. Working from home every day means that my "office" space is ready for me every morning, exactly as I left it. I've still not got things perfect I don't thing, particularly in terms of having a setup that encourages good posture ad positioning, but it's better than it used to be for sure! Having the laptop on a big thick textbook has helped so that all of my screens are at a similar height.
+
+So that's a brief think about the positives, so what about the inevitable negatives? Well for a start it feels a lot harder to leave work behind. Being probably one of the very last people in the tech industry to be holding out against having a smartphone I'd previously found it pretty simple to leave work at the office. Having Slack on my tablet though and everyone knowing you should be at home can make it hard to not check Slack and get the urge to join in with whatever is going on. I'm starting to get better at it though and not feel guilty that I'm not constantly available. All being well I'll be having an extended period of leave soon, so this is arguably a good decompression period to get ready!
+
+I've definitely noticed a decline in my desire for social interaction. When I was in the office every day, I was always up for a drink after work in the pub opposite the office, or to play some board games and eat some food. Despite a solid effort from the company to encourage interaction, I've found my appetite much dampened. I suspect it's something to do with already being comfortable and happy at home, and video calls not being the same as real face-to-face interaction in spite of everyone's best efforts.
+
+We've probably also had more misunderstandings and endless Slack threads than before where it turns out everyone's talking about the same thing. It's been a learning curve to identify what can be discussed via text and what would be much quicker all round if we just had a quick call. I'm certain everyone is already fed up with my sheer delight at giphs too! /giphy has got a lot to answer for...
+
+So there we go: a few brief musings on how I'm finding enforced working from home during lockdown. It's much better than I expected and has made me think that maybe I wouldn't mind working fully remotely at some point so that we could live abroad. Ultimately, I don't think it's fair for me to complain about the small things that make it difficult given I can still do my job as normal, despite the virus and everything. I am immensely lucky to have a job at this time and have a job in a sector of the industry that is (hopefully) unlikely to be too negatively affected. My heart goes out to anyone who's lost their job or been furloughed at this time when so many people are sadly seeing their world collapse around them.
