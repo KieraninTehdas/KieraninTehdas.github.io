@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dan North - Patterns Of Effective Teams"
+date: 2020-05-28
 ---
 
 <https://www.youtube.com/watch?v=lvs7VEsQzKY>
@@ -41,6 +42,8 @@ The number of people who need to get run down before you can get any work done! 
 This is one I find interesting for our company I work for is now. Making people rotate around roles means that they will end up doing things they're not that interested in or excited about. Understandably they'll probably end up not doing a particularly good job as a result. We're struggling to find frontend engineers so there's been a bit of a push to try and make everyone full stack.
 
 Firstly I'm not really sure I believe in the concept of full stack for a start! I work with several people who are true frontend specialists and have dedicated their working lives to ui and Javascript. It's offensive to my mind to imply that anyone can do what they do. Set people up to do the best work they can on the thing they like and are best at. As long as you have enough breadth of skill to let people go on holiday for example, you should be fine.
+
+![An artist's depiction of a full stack develops](/assets/fullstack_horse.jpg)
 
 This is how I understand the concept of shallow silos. People are siloed in the sense that there's something they specifically are very good at. If the silo is shallow enough though and everyone communicates well, you should see a better outcome than trying to completely break down the silos altogether by making everyone do all the things.
 
