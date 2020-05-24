@@ -2,6 +2,7 @@
 layout: post
 title: "Dan North - Patterns Of Effective Teams"
 date: 2020-05-28
+published: false
 ---
 
 <https://www.youtube.com/watch?v=lvs7VEsQzKY>
