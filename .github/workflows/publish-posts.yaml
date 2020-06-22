@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Find And Move Posts
-        uses: KieraninTehdas/gha-pages-auto-publish@v0
+        uses: KieraninTehdas/gha-pages-auto-publish@0.1.0
 
       - name: Commit Changes
         run: |
