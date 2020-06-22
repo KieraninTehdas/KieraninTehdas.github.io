@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Find And Move Posts
-        - uses: KieraninTehdas/gha-pages-auto-publish@v0
+        uses: KieraninTehdas/gha-pages-auto-publish@v0
 
       - name: Commit Changes
         run: |
