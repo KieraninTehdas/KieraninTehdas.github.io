@@ -23,3 +23,4 @@ jobs:
           git config --global user.name "Auto Publisher"
           git add --all
           git commit -m "Auto-published waiting articles"
+          git push
