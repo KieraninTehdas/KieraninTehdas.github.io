@@ -13,9 +13,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Find And Move Posts
-        uses: KieraninTehdas/gha-pages-auto-publish@0.1.0
+        uses: KieraninTehdas/gha-pages-auto-publish@0.2.0
+        id: move_posts
 
       - name: Commit Changes
+        if: ${{ steps.move_posts.outputs.publishedPosts > 0 }}
         run: |
+          git config --global user.email "dummy"
+          git config --global user.name "Auto Publisher"
           git add --all
-          git commit -m "Auto Publish Articles"
+          git commit -m "Auto-published waiting articles"
