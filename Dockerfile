@@ -1,12 +1,10 @@
-FROM ruby:2.7
+FROM ruby:2.7-alpine
 
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+ENV PAGES_REPO_NWO="doesnt/matter"
 
 WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
-RUN bundle install
+RUN apk add --no-cache make g++ && bundle config --global frozen 1 && bundle install
 
-EXPOSE 4000:4000
 CMD ["bundle", "exec", "jekyll", "serve"]
