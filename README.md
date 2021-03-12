@@ -1,5 +1,5 @@
 # KieraninTehdas.github.io
 
-Source for my Github pages site, now that I spelled the repo name correctly...
+Source for my Github pages site.
 
 kieranintehdas.github.io
