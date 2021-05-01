@@ -31,6 +31,8 @@ achieve something. You don't measure a room just to know its dimensions; you wan
 of furniture will fit or calculate how much wallpaper you're going to need in order to redecorate.
 Knowing a measurement or metric alone is useless without a reason for it.
 
+![measures]
+
 ## What Are You Trying To Achieve?
 
 A potential development metric could be the number of commits made by developers in a given week.
@@ -84,3 +86,10 @@ Someone else may insta-approve leading to a low value, but we've created another
 
 You then need to consider how you're going to present the metrics and the target value if
 appropriate, as well as the frequency you'll publish them and indeed who will be interested.
+
+---
+
+Photo by <a href="https://unsplash.com/@sernarial?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">patricia serna</a> on <a href="https://unsplash.com/collections/3497526/metrics-and-meauserments?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+
+[measures]: /assets/measures.jpg 

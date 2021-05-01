@@ -12,4 +12,7 @@ I'm a firm believer in using the right tool for the job and not being dogmatic a
 
 By "background" I'm a physicist and still maintain a keen interest in physics, particularly medical physics.
 
-One day I might even write a blog post about something...
+Any posts I write will almost certainly contain no groundbreaking or original ideas. They're
+more likely me drawing together and organising my thoughts and opinions on something or documenting
+something I've done. Basically this is a disclaimer: the intended audience for any posts is
+probably me a future or present me!
