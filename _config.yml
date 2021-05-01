@@ -4,6 +4,7 @@ avatar: "/assets/avatar.jpg"
 github_username: KieraninTehdas
 navbar-links:
   About Me: "/"
+  Posts: "/posts"
 
 social-network-links:
   email: kieranintehdas@gmail.com

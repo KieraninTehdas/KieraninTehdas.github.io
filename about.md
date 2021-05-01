@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /
 ---
 
 I've been working as a software engineer at a health tech company in Scotland since 2017.
@@ -12,4 +13,3 @@ I'm a firm believer in using the right tool for the job and not being dogmatic a
 By "background" I'm a physicist and still maintain a keen interest in physics, particularly medical physics.
 
 One day I might even write a blog post about something...
-
