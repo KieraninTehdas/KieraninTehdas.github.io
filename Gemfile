@@ -2,8 +2,8 @@
 
 source "https://rubygems.org"
 
-gem "beautiful-jekyll-theme", "~> 6.0"
 gem "jekyll", "~> 4.3.3"
+gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
