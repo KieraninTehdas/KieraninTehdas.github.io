@@ -20,16 +20,21 @@
 
 title: KieraninTehdas
 author: KP
-email: kieranintehdas@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Formerly a single random musing. Now hopefully some deep dives on how bits
-  of Ruby On Rails amongst other things works
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: kieranintehdas
+avatar: "/assets/duckface.jpg"
+
+navbar-links:
+  About Me: "/about"
+  Posts: "/"
+
+social-network-links:
+  email: kieranintehdas@gmail.com
+  github: KieraninTehdas
 
 # Build settings
-theme: minima
+theme: beautiful-jekyll-theme
 plugins:
   - jekyll-feed
 
