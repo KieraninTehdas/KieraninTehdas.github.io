@@ -28,7 +28,7 @@ but taking a step even further back, what does `bin/rails` actually mean? This i
 
 # Binstubs
 
-The very handy [rbenv]() defines a binstub as follows:
+The very handy [rbenv defines a binstub](https://github.com/rbenv/rbenv/wiki/Understanding-binstubs) as follows:
 
 > Binstubs are wrapper scripts around executables (sometimes referred to as "binaries",
 > although they don't have to be compiled) whose purpose is to prepare the environment
@@ -38,36 +38,8 @@ They're effectively small scripts to ensure everything is ready before running a
 When creating a new Rails project, several binstubs are generated which can be found in `/bin`,
 such as `rails` and `setup`.
 
-Before trying to get into binstubs, it's useful to have a quick think about dependencies and bundle.
-
-## Bundle(r)
-
-Dependency management is a nightmare in most languages. I've actually found it least stressful
-in Ruby so far thanks to Bundler. Bundler is a tool for managing the dependencies for managing
-the dependencies of a Ruby application or library and for packaging the code into an executable.
-Packaged Ruby code is known as a `gem`.
-
-Bundler takes care of installing all of the gems that we need and ensuring consistent versions
-that are the same, or same enough, regardless of when or where the depencies get installed.
-
-The dependencies of an application are specified in a `Gemfile`. This is all analoagous to `npm`
-and `package.json` or something like `pipenv` or `poetry` in Python. I've purposefully ignored `pip`
-here as my understanding is it works a little differently.
-
-We can install gems using the `gem install` command. `gem install` will install the gem
-such that it's available for the entire system. We can install `rubocop` with `gem install rubocop`
-in any directory.
-
-System wide gems aren't advisable for any application dependencies however as different projects may
-need different, very specific versions. This is where Bundler comes in. It installs dependencies in
-isolation for the specific project. Instead of using simply `rubocop` as we would if we had installed
-rubocop with `gem install`, we have to use `bundle exec rubocop` if we want the specific version of
-rubocop that our project needs.
-
 ## What does the rails binstub do?
 
-In most cases, `bundle exec rails` and using the binstub `bin/rails` will do the same thing.
-Using `bundle exec rails` even uses the rails binstub under the hood. So what does it actually do?
 This is the content of the rails binstub on my machine, as generated for a Rails 7 project.
 
 ```
@@ -77,7 +49,43 @@ require_relative "../config/boot"
 require "rails/commands"
 ```
 
-So really nothing much. The main thing it does is set the `APP_PATH` variable which
-makes it much easier to run commands, particularly in ci environments, as you don't need
-to fiddle about with getting into the correct directory. You can be outside of your application
-directory entirely and run `./somewhere/my-app/bin/rails server` and it will "just work"TM.
+The script is small enough that I think we can afford to step through it line by line.
+
+### `#!/usr/bin/env ruby`
+
+This is a shebang. It's not related to Ruby per-se. It's used in Unix-like environments as a way to execute a
+file like a command, but hiding the implementation and interpreter. The shebang is what lets us run `bin/rails`
+rather than having to type `ruby bin/rails`. We don't have to specify which interpreter should execute the content
+of the file as the file itself specifies the interpreter.
+
+### `APP_PATH = File.expand_path("../config/application", __dir__)`
+
+Let's start with the right hand side of this assignment. `File.expand_path` returns the absolute path
+to the file passed as the first argument. As [per the docs](https://www.rubydoc.info/stdlib/core/File.expand_path),
+relative paths are referenced from the current working directory. The second argument `__dir__` is a Ruby kernel method
+which returns the path to the directory which contains the file which called the method. Sticking some debug logging
+into the binstub makes this mildly clearer. Assume that we're running `bin/rails` from `~/ruby` which contains
+`some_project` directory, so we run the command as `some_project/bin/rails`. The outputs are as follows,
+
+```
+puts Dir.pwd => /home/me/ruby
+puts __dir__ => /home/me/ruby/some_project/bin
+puts File.expand_path("../config/application") => /home/me/config/application
+puts File.expand_path("../config/application", __dir__) => /home/me/ruby/some_project/config/application
+puts File.expand_path("../config/idontexist", __dir__) => /home/me/ruby/some_project/config/idontexist
+```
+
+You'll see from the last example that `expand_path` doesn't actually check that the first argument exists!
+The third example without the `__dir__` second argument gives us back a dud path. It finds the parent of the current
+working directory, `/home/me/ruby`, and sticks on `config/application` giving us a valid path to a non-existent file.
+
+For this reason, we need the `__dir__` argument to ensure we get back a path to the file we want, relative to the file our
+command is running from, not where we ran our command. This is we want to go up a directory from our
+project's `bin/` directory. This allows us to run `bin/rails` from anywhere we care to, but ensures the `APP_PATH` variable
+points to the correct file. Being able to run the command correctly from anywhere is particularly useful in CI
+environments and removes the need for a lot of tedious moving around paths to get into just the right directory.
+
+Two lines of questioning now open up:
+
+1.  What is `APP_PATH` and where is it used?
+2.  What is `../config/application` and why are we keeping a path to it in a variable?
