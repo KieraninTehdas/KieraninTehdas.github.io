@@ -3,7 +3,7 @@ layout: post
 title: Creating a Pimoroni Badger 2040 custom badge
 ---
 
-It's a new year so time for another post! I recently received delivery of a new hardware
+It's a new year so time for another post! I recently took delivery of a new hardware
 toy - a [Pimoroni Badger 2040 programmable E Ink display badge](https://shop.pimoroni.com/products/badger-2040?variant=39752959852627).
 
 I bought it as I'm going to a conference later in the year and I wanted a cool name badge!
@@ -13,9 +13,9 @@ is drawn dynamically, but the idea of crafting something pixel by pixel doesn't 
 
 Searching didn't yield many helpful results, but thankfully I came across an [excellent post on 
 thoughtasylum.com](https://www.thoughtasylum.com/2022/05/01/the-badger-2040-custom-badges/)
-in which the author had solved this problem with idea of using pre-built images.
+in which the author had solved this problem with the idea of using pre-built images.
 The badger includes an example for displaying images and all you need to do is copy
-the image file to a directory on the board and you're away which is ideal! The software
+the image file to a directory on the board and you're away! The software
 on the device must have changed over the intervening 3 years as I needed some minor
 tweaks to their process, but thankfully the tweaks were simplifications.
 
@@ -23,15 +23,15 @@ tweaks to their process, but thankfully the tweaks were simplifications.
 
 In the aforementioned post the author describes how they used Affinity Designer with a
 296x128px template to create a custom badge image. Unfortunately Affinity Designer costs
-£70, isn't available for Linux, and have no design chops so that was out. Open source to the rescue!
+£70, isn't available for Linux, and I have no design chops so that was out. Open source to the rescue!
 
 Another quick search for vector image software brought me to [Inkscape](https://inkscape.org/)
 which I vaguely recognised I think as something pre-installed on Ubuntu? This turned
 out to be perfect.
 
-After opening Inkscape the first job is to create a new image and resize the canvas. Control + Shift
-+ D opens the document properties menu where you can set the size to be 296px by 128px
-and then set the orientation to landscape. Just make sure the units is set to pixels when
+After opening Inkscape the first job is to create a new image and resize the canvas. 
+Control + Shift + D opens the document properties menu where you can set the size to be 296px by 128px
+and then set the orientation to landscape. Just make sure the units are set to pixels when
 setting the dimensions! I also found creating guides around the page in the Guides tab was
 helpful.
 
@@ -56,10 +56,10 @@ Connecting to the Badge is a little bit fiddly. Hit the reset button on the Badg
 a second, and then see if mpremote will connect. In Thonny you need to hit the stop
 button to stop the main program from executing.
 
-Use `mpremote fs cp yourImage.jpb :images/yourImage.jpg` to copy your image into the `/images`
+Use `mpremote fs cp yourImage.jpg :images/yourImage.jpg` to copy your image into the `/images`
 directory on the Badger. Alternatively, use Thonny. Hit reset again and go to the images
 example, and hopefully there's your badge! You may need to scroll down a little, I think
 the images are in alphabetical order by display name.
 
-Images to follow!
+Images to follow! One day when I work out how to take screenshots under Wayland...
 
