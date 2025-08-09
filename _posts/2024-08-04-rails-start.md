@@ -89,3 +89,7 @@ Two lines of questioning now open up:
 
 1.  What is `APP_PATH` and where is it used?
 2.  What is `../config/application` and why are we keeping a path to it in a variable?
+
+A quick grep for `APP_PATH` in the root directory of a Rails project (or at least one of my Rails projects)
+returns no results besides the line in the binstub we're looking at, so the variable isn't being used in application
+code we can edit.
